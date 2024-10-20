@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <!-- Login Fragment -->
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.capstone.bookcollectiontracker.ui.fragments.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Register Fragment -->
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.capstone.bookcollectiontracker.ui.fragments.RegisterFragment"
+        android:label="Register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <!-- Book List Fragment -->
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="com.capstone.bookcollectiontracker.ui.fragments.BookListFragment"
+        android:label="Book List"
+        tools:layout="@layout/fragment_book_list">
+        <action
+            android:id="@+id/action_bookListFragment_to_addEditBookFragment"
+            app:destination="@id/addEditBookFragment" />
+        <action
+            android:id="@+id/action_bookListFragment_to_bookDetailsFragment"
+            app:destination="@id/bookDetailsFragment" />
+        <action
+            android:id="@+id/action_bookListFragment_to_loginFragment"
+            app:destination="@id/loginFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_bookListFragment_to_reportGenerationFragment"
+            app:destination="@id/reportGenerationFragment" />
+    </fragment>
+
+    <!-- Add/Edit Book Fragment -->
+    <fragment
+        android:id="@+id/addEditBookFragment"
+        android:name="com.capstone.bookcollectiontracker.ui.fragments.AddEditBookFragment"
+        android:label="Add/Edit Book"
+        tools:layout="@layout/fragment_add_edit_book">
+        <argument
+            android:name="bookId"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+    <!-- Book Details Fragment -->
+    <fragment
+        android:id="@+id/bookDetailsFragment"
+        android:name="com.capstone.bookcollectiontracker.ui.fragments.BookDetailsFragment"
+        android:label="Book Details"
+        tools:layout="@layout/book_details_fragment">
+        <action
+            android:id="@+id/action_bookDetailsFragment_to_addEditBookFragment"
+            app:destination="@id/addEditBookFragment" />
+    </fragment>
+
+    <!-- Report Generation Fragment -->
+    <fragment
+        android:id="@+id/reportGenerationFragment"
+        android:name="com.capstone.bookcollectiontracker.ui.fragments.ReportGenerationFragment"
+        android:label="Report Generation"
+        tools:layout="@layout/fragment_report_generation">
+
+        <action
+            android:id="@+id/action_reportGenerationFragment_to_reportDisplayFragment"
+            app:destination="@id/reportDisplayFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/reportDisplayFragment"
+        android:name="com.capstone.bookcollectiontracker.ui.fragments.ReportDisplayFragment"
+        android:label="Report Display"
+        tools:layout="@layout/fragment_report_display">
+    </fragment>
+
+</navigation>

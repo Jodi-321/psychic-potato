@@ -1,0 +1,47 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Report Title Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Report Title"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/editTextReportTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:maxLines="1"
+            android:layout_marginBottom="8dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- RecyclerView for Field Selection -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fieldSelectionRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingTop="4dp"/>
+
+    <!-- Report Preview -->
+    <TextView
+        android:id="@+id/previewTextView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Report Preview"
+        android:textColor="@android:color/black"
+        android:padding="16dp"
+        android:visibility="visible" />
+
+    <!-- Generate Report Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/generateReportButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Generate Report" />
+</LinearLayout>

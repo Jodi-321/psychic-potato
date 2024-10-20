@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Book Collection Tracker</string>
+    <string name="no_books_found">No books found</string>
+    <string name="add_book">Add Book</string>
+    <string name="action_logout">Logout</string>
+    <string name="action_search">Search</string>
+    <string name="sort_title">Sort by Title</string>
+    <string name="sort_author">Sort by Author</string>
+    <string name="sort_date">Sort by Date</string>
+    <string name="book_title">Title</string>
+    <string name="book_author">Author</string>
+    <string name="book_isbn">ISBN</string>
+    <string name="book_genre">Genre</string>
+    <string name="book_publication_date">Publication Date</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+</resources>
